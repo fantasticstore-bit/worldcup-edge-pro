@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WorldCup Edge</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <div id="accessGate" class="access-gate">
+      <section class="access-panel">
+        <div class="mark">WE</div>
+        <h1>WorldCup Edge Pro</h1>
+        <p>Market analytics desk per quote, value, bankroll e performance. Accesso personale.</p>
+        <label>Username
+          <input id="loginUser" type="text" autocomplete="username" placeholder="Username">
+        </label>
+        <label>Password
+          <input id="loginPassword" type="password" autocomplete="current-password" placeholder="Password">
+        </label>
+        <label class="disclaimer-check">
+          <input id="acceptDisclaimer" type="checkbox">
+          <span>Confermo che questo software è uno strumento di analisi, non una garanzia di profitto o consulenza finanziaria. Le scommesse comportano rischio di perdita.</span>
+        </label>
+        <button id="unlockApp" class="primary">Entra</button>
+        <a class="micro" href="/landing.html">Vedi landing commerciale</a>
+        <p id="loginError" class="micro"></p>
+      </section>
+    </div>
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="mark">WE</div>
+        <div>
+          <strong>WorldCup Edge</strong>
+          <span>Pro desk</span>
+        </div>
+      </div>
+      <nav>
+        <button class="nav active" data-view="dashboard">Dashboard</button>
+        <button class="nav" data-view="guide">Guida</button>
+        <button class="nav" data-view="daily">Daily Report</button>
+        <button class="nav" data-view="finder">Book Finder</button>
+        <button class="nav" data-view="odds">Quote</button>
+        <button class="nav" data-view="bets">Bets</button>
+        <button class="nav" data-view="performance">Performance</button>
+        <button class="nav" data-view="product">Product</button>
+        <button class="nav" data-view="settings">Model</button>
+      </nav>
+    </aside>
+
+    <main>
+      <section class="topbar">
+        <div>
+          <h1>World Cup 2026</h1>
+          <p id="subtitle">Caricamento modello...</p>
+        </div>
+        <div class="top-actions">
+          <button id="demoMode" class="mode-button">Demo off</button>
+          <button id="refresh" class="icon-button" title="Aggiorna">↻</button>
+        </div>
+      </section>
+
+      <section id="odds" class="view">
+        <div class="section-head">
+          <h2>Quote Snapshot</h2>
+          <span id="oddsTotal"></span>
+        </div>
+        <div class="demo-only demo-notice">
+          Demo mode: quote e bookmaker sono dati dimostrativi. Nessuna API privata richiesta.
+        </div>
+        <div class="odds-actions live-only">
+          <label>API key
+            <input id="oddsApiKey" type="password" placeholder="The Odds API key">
+          </label>
+          <label>Sport
+            <input id="oddsSport" type="text" value="soccer_fifa_world_cup">
+          </label>
+          <label>Bookmakers
+            <input id="oddsBookmakers" type="text" placeholder="opzionale">
+          </label>
+          <button id="fetchOddsApi" class="primary">Aggiorna API</button>
+        </div>
+        <div class="import-box odds-import live-only">
+          <h2>Import quote CSV</h2>
+          <textarea id="csvImport" placeholder="home_team,away_team,home_odds,draw_odds,away_odds,bookmaker"></textarea>
+          <button id="importOdds" class="primary">Importa quote</button>
+        </div>
+        <div class="bookmaker-panel live-only">
+          <div class="section-head compact">
+            <h2>Bookmaker giocabili</h2>
+            <span id="bookmakerTotal"></span>
+          </div>
+          <div class="bookmaker-actions">
+            <button id="selectAllBooks">Tutti</button>
+            <button id="selectNoBooks">Nessuno</button>
+            <button id="saveBooks" class="primary">Applica filtro</button>
+          </div>
+          <div id="bookmakerList" class="bookmaker-list"></div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Ora</th>
+                <th>Match</th>
+                <th>Book</th>
+                <th>1</th>
+                <th>X</th>
+                <th>2</th>
+                <th>Fonte</th>
+              </tr>
+            </thead>
+            <tbody id="oddsRows"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="finder" class="view">
+        <div class="section-head">
+          <h2>Book Finder</h2>
+          <span id="finderTotal"></span>
+        </div>
+        <div class="finder-controls">
+          <label>Paese
+            <select id="finderCountry"></select>
+          </label>
+          <label>Partita
+            <select id="finderMatch"></select>
+          </label>
+          <button id="loadFinder" class="primary">Trova quote</button>
+        </div>
+        <div id="finderSummary" class="finder-summary"></div>
+        <div id="finderOutcomes" class="finder-outcomes"></div>
+        <div class="perf-grid">
+          <section class="perf-panel">
+            <div class="section-head compact">
+              <h2>Quote feed</h2>
+            </div>
+            <div id="finderPrices" class="perf-table"></div>
+          </section>
+          <section class="perf-panel">
+            <div class="section-head compact">
+              <h2>Link rapidi</h2>
+            </div>
+            <div id="finderLinks" class="mini-list"></div>
+          </section>
+        </div>
+      </section>
+
+      <section id="dashboard" class="view active">
+        <section class="assistant-panel">
+          <div class="assistant-copy">
+            <span class="micro">Assistente operativo</span>
+            <h2 id="assistantTitle">Cosa faccio oggi</h2>
+            <p id="assistantPrimary">Caricamento consigli...</p>
+            <div id="assistantRules" class="assistant-rules"></div>
+            <a class="assistant-export" href="/api/export/assistant.csv?country=nl">Scarica report di oggi</a>
+          </div>
+          <div id="assistantBankroll" class="assistant-bankroll"></div>
+        </section>
+        <div id="assistantCards" class="assistant-grid"></div>
+        <section class="pulse-panel">
+          <div class="section-head compact">
+            <h2>Market Pulse</h2>
+            <span>movimento quota sulle top plays</span>
+          </div>
+          <div id="marketPulse" class="pulse-grid"></div>
+        </section>
+        <div class="kpis" id="kpis"></div>
+        <section class="top-plays">
+          <div class="section-head compact">
+            <h2>Top Plays</h2>
+            <span id="topPlaysTotal"></span>
+          </div>
+          <div id="topPlays" class="play-grid"></div>
+        </section>
+        <div class="toolbar">
+          <div class="segmented">
+            <button class="segment active" data-filter="all">Tutte</button>
+            <button class="segment" data-filter="value">Value</button>
+            <button class="segment" data-filter="missing">No odds</button>
+            <button class="segment" data-filter="skip">Skip</button>
+          </div>
+          <input id="search" type="search" placeholder="Cerca squadra, gruppo, match">
+          <a class="export-link" href="/api/export/value.csv">Export value CSV</a>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Match</th>
+                <th>Probabilità</th>
+                <th>Quote</th>
+                <th>Edge</th>
+                <th>Kelly</th>
+                <th>Qualità</th>
+                <th>Decisione</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="matches"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="guide" class="view">
+        <div class="section-head">
+          <h2>Guida semplice</h2>
+          <span>per usare 1000 euro senza impazzire</span>
+        </div>
+        <div class="guide-grid">
+          <article class="guide-hero">
+            <span class="micro">Workflow consigliato</span>
+            <h2>Apri, controlla, gioca solo se il prezzo è giusto.</h2>
+            <p>Il modello non ti dice di forzare una puntata. Ti dice qual è la quota minima per cui il rischio ha senso.</p>
+          </article>
+          <article class="guide-card">
+            <strong>1. Bankroll</strong>
+            <p>Imposta 1000 u come capitale totale. Se vuoi ragionare in euro, lascia 1 u = 1 euro oppure usa unità da 10 euro per tracking più pulito.</p>
+          </article>
+          <article class="guide-card">
+            <strong>2. Assistente</strong>
+            <p>Guarda prima le card sopra la dashboard. Verde è giocabile, arancione è piccola/da controllare, rosso significa non entrare a quel prezzo.</p>
+          </article>
+          <article class="guide-card">
+            <strong>3. Quota minima</strong>
+            <p>Se il bookmaker offre meno della quota minima, salta. Un value perso non è più un value.</p>
+          </article>
+          <article class="guide-card">
+            <strong>4. Book Finder</strong>
+            <p>Apri il match, scegli il paese e controlla il bookmaker con il prezzo migliore. L'app non piazza scommesse.</p>
+          </article>
+          <article class="guide-card">
+            <strong>5. Tracker</strong>
+            <p>Salva solo le bet reali. Dopo il risultato marca won/lost/push e guarda ROI, CLV e qualità del modello.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="daily" class="view">
+        <div class="section-head">
+          <h2>Daily Betting Sheet</h2>
+          <div class="head-actions">
+            <span id="dailyTotal"></span>
+            <button id="printDaily" class="primary">Stampa</button>
+            <a class="export-link small" href="/api/export/assistant.csv?country=nl">CSV</a>
+          </div>
+        </div>
+        <section id="dailyReport" class="daily-report"></section>
+      </section>
+
+      <section id="bets" class="view">
+        <div class="section-head">
+          <h2>Bet Tracker</h2>
+          <div class="head-actions">
+            <span id="betsTotal"></span>
+            <a class="export-link small" href="/api/export/bets.csv">Backup CSV</a>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Match</th>
+                <th>Pick</th>
+                <th>Quota</th>
+                <th>Stake</th>
+                <th>EV</th>
+                <th>CLV</th>
+                <th>P/L</th>
+                <th>Stato</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="betsRows"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="performance" class="view">
+        <div class="section-head">
+          <h2>Performance Lab</h2>
+          <span id="performanceTotal"></span>
+        </div>
+        <div id="performanceKpis" class="kpis perf-kpis"></div>
+        <div class="perf-grid">
+          <section class="perf-panel equity-panel">
+            <div class="section-head compact">
+              <h2>Equity</h2>
+              <span id="equityTotal"></span>
+            </div>
+            <div id="equityChart" class="equity-chart"></div>
+          </section>
+          <section class="perf-panel">
+            <div class="section-head compact">
+              <h2>Best CLV</h2>
+            </div>
+            <div id="bestClvList" class="mini-list"></div>
+          </section>
+        </div>
+        <div class="perf-grid three">
+          <section class="perf-panel">
+            <h2>Status</h2>
+            <div id="statusPerf" class="perf-table"></div>
+          </section>
+          <section class="perf-panel">
+            <h2>Grade</h2>
+            <div id="gradePerf" class="perf-table"></div>
+          </section>
+          <section class="perf-panel">
+            <h2>Price Alert</h2>
+            <div id="pricePerf" class="perf-table"></div>
+          </section>
+        </div>
+        <div class="perf-grid">
+          <section class="perf-panel">
+            <h2>Best Bets</h2>
+            <div id="bestBetsList" class="mini-list"></div>
+          </section>
+          <section class="perf-panel">
+            <h2>Worst Bets</h2>
+            <div id="worstBetsList" class="mini-list"></div>
+          </section>
+        </div>
+      </section>
+
+      <section id="product" class="view">
+        <div class="section-head">
+          <h2>Product Status</h2>
+          <span id="productVersion"></span>
+        </div>
+        <div class="product-hero">
+          <div>
+            <span class="micro">Commercial readiness</span>
+            <strong id="readinessScore">-</strong>
+            <p id="productPositioning"></p>
+          </div>
+          <div class="release-badge" id="releaseStatus">-</div>
+        </div>
+        <div id="productChecklist" class="checklist"></div>
+        <section class="legal-panel">
+          <h2>Responsible Use</h2>
+          <p>WorldCup Edge Pro fornisce analisi statistiche e di mercato. Non promette vincite, non sostituisce giudizio personale, non elimina il rischio e non piazza scommesse. Usa stake controllati, rispetta le leggi applicabili nel tuo paese e considera il gioco solo come attività a rischio di perdita.</p>
+        </section>
+        <section class="legal-panel">
+          <h2>Cloud, vendita e App Store</h2>
+          <div id="commercialRoadmap" class="roadmap-grid"></div>
+        </section>
+      </section>
+
+      <section id="settings" class="view">
+        <div class="profile-strip">
+          <button class="profile" data-profile="conservative">Conservativo</button>
+          <button class="profile" data-profile="balanced">Bilanciato</button>
+          <button class="profile" data-profile="aggressive">Aggressivo</button>
+        </div>
+        <div class="settings-grid">
+          <label>Draw base <input data-control="base_draw_probability" type="number" step="0.005"></label>
+          <label>Min EV <input data-control="min_ev" type="number" step="0.005"></label>
+          <label>Min edge <input data-control="min_edge" type="number" step="0.005"></label>
+          <label>Max overround <input data-control="max_overround" type="number" step="0.005"></label>
+          <label>Max odds <input data-control="max_decimal_odds" type="number" step="0.1"></label>
+          <label>Kelly fraction <input data-control="kelly_fraction" type="number" step="0.05"></label>
+          <label>Kelly cap <input data-control="kelly_cap" type="number" step="0.005"></label>
+          <label>Strength curve <input data-control="strength_exponent" type="number" step="0.1"></label>
+          <label>Market respect <input data-control="market_respect" type="number" step="0.05"></label>
+          <label>Odds mode
+            <select data-control="odds_mode">
+              <option value="0">Median</option>
+              <option value="1">Best odds</option>
+            </select>
+          </label>
+          <label>Bankroll <input data-control="bankroll_start" type="number" step="10"></label>
+          <label>Unità <input data-control="unit_size" type="number" step="0.5"></label>
+          <label>Stake max <input data-control="max_stake" type="number" step="0.5"></label>
+          <label>Max exposure <input data-control="max_exposure_pct" type="number" step="0.005"></label>
+          <label>Stake mode
+            <select data-control="stake_mode">
+              <option value="0">Flat</option>
+              <option value="1">Kelly</option>
+            </select>
+          </label>
+        </div>
+        <button id="saveControls" class="primary">Salva modello</button>
+      </section>
+    </main>
+
+    <dialog id="betDialog">
+      <form method="dialog">
+        <h2>Registra bet</h2>
+        <input type="hidden" id="betMatchId">
+        <input type="hidden" id="betSelection">
+        <input type="hidden" id="betOdds">
+        <input type="hidden" id="betProb">
+        <input type="hidden" id="betEv">
+        <input type="hidden" id="betKelly">
+        <p id="betSummary"></p>
+        <div id="stakeSuggestion" class="stake-suggestion"></div>
+        <label>Stake <input id="betStake" type="number" min="0" step="0.5" value="10"></label>
+        <label>Note <input id="betNotes" type="text"></label>
+        <div class="dialog-actions">
+          <button value="cancel">Annulla</button>
+          <button id="confirmBet" value="default" class="primary">Salva</button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="matchDialog">
+      <form method="dialog" class="match-dialog">
+        <div class="dialog-head">
+          <div>
+            <h2 id="detailTitle">Match detail</h2>
+            <p id="detailSubtitle" class="micro"></p>
+          </div>
+          <button value="cancel" class="icon-button" title="Chiudi">×</button>
+        </div>
+        <div id="detailBody"></div>
+        <div class="dialog-actions">
+          <button value="cancel">Chiudi</button>
+          <button id="detailSaveBet" type="button" class="primary">Salva bet</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

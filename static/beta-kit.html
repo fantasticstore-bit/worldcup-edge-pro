@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WorldCup Edge Pro - Beta Kit</title>
+    <link rel="stylesheet" href="/landing.css">
+  </head>
+  <body>
+    <header class="landing-nav">
+      <a class="landing-brand" href="/landing.html">
+        <span>WE</span>
+        <strong>WorldCup Edge <em>Beta Kit</em></strong>
+      </a>
+      <nav>
+        <a href="/landing.html">Landing</a>
+        <a href="/?demo=1">Demo</a>
+        <a href="#messages">Messages</a>
+      </nav>
+      <a class="nav-cta" href="/?demo=1">Open Demo</a>
+    </header>
+
+    <main class="kit-main">
+      <section class="kit-hero">
+        <span class="eyebrow">7 day launch kit</span>
+        <h1>Sell the beta before building the cloud.</h1>
+        <p>Goal: 10 demos, 5 beta commitments, 79 EUR price test. If nobody tries to pay, we improve positioning before writing more code.</p>
+      </section>
+
+      <section class="kit-grid">
+        <article>
+          <strong>Offer</strong>
+          <p>Private World Cup beta pass: daily betting sheet, quota minima, stake, Book Finder, bankroll and CLV tracking.</p>
+        </article>
+        <article>
+          <strong>Price</strong>
+          <p>79 EUR beta. First 20 users. Manual payment first, Stripe only after real intent.</p>
+        </article>
+        <article>
+          <strong>Rule</strong>
+          <p>Analytics-only. No profit promises, no auto-betting, no bookmaker account handling.</p>
+        </article>
+      </section>
+
+      <section class="demo-grid">
+        <div>
+          <span class="eyebrow">60 second demo</span>
+          <h2>Show discipline, not magic.</h2>
+          <p>Keep the demo fast. The buyer should remember one thing: do not enter below minimum odds.</p>
+        </div>
+        <div class="flow-list">
+          <div><strong>1</strong><span>Open demo mode</span></div>
+          <div><strong>2</strong><span>Show Assistant action: playable / small / do not play</span></div>
+          <div><strong>3</strong><span>Point at quota minima and stake</span></div>
+          <div><strong>4</strong><span>Open Book Finder</span></div>
+          <div><strong>5</strong><span>Open Daily Betting Sheet</span></div>
+          <div><strong>6</strong><span>Show Performance Lab / CLV</span></div>
+        </div>
+      </section>
+
+      <section id="messages" class="beta-plan">
+        <div class="beta-copy">
+          <span class="eyebrow">Copy/paste DM</span>
+          <h2>First message.</h2>
+          <p>Use this for friends, betting groups, and people who understand odds.</p>
+        </div>
+        <div class="copy-card">
+          <p id="shortDm">Hey, sto costruendo una dashboard privata per il Mondiale 2026. Non è un bot e non promette vincite: è un desk analytics che ti dà quota minima, stake, bookmaker da controllare, daily sheet e CLV. Ti va una demo da 10 minuti?</p>
+          <button class="primary-cta" data-copy="#shortDm">Copy DM</button>
+        </div>
+      </section>
+
+      <section class="waitlist-section">
+        <div>
+          <span class="eyebrow">Demo questions</span>
+          <h2>Ask these after showing it.</h2>
+          <p>Do not over-explain. Ask, listen, write exact words.</p>
+        </div>
+        <div class="beta-steps">
+          <article><strong>Question 1</strong><span>Would this save you time during a matchday?</span></article>
+          <article><strong>Question 2</strong><span>Which screen would you use every day?</span></article>
+          <article><strong>Question 3</strong><span>At 79 EUR: cheap, fair, or expensive?</span></article>
+          <article><strong>Question 4</strong><span>What would stop you from paying today?</span></article>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      document.addEventListener("click", async (event) => {
+        const button = event.target.closest("[data-copy]");
+        if (!button) return;
+        const target = document.querySelector(button.dataset.copy);
+        await navigator.clipboard.writeText(target.textContent.trim());
+        button.textContent = "Copied";
+        setTimeout(() => button.textContent = "Copy DM", 1200);
+      });
+    </script>
+  </body>
+</html>
