@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: worldcup-edge-pro
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python3 run_pro.py
+    envVars:
+      - key: WORLD_CUP_EDGE_USER
+        value: ciobez
+      - key: WORLD_CUP_EDGE_PASSWORD
+        sync: false
+      - key: THE_ODDS_API_KEY
+        sync: false

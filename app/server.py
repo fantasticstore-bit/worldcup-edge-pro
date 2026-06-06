@@ -1101,7 +1101,7 @@ def alert_tone(alert):
 
 
 def fetch_odds_api(conn, data):
-    api_key = data.get("api_key", "").strip()
+    api_key = (data.get("api_key", "") or os.environ.get("THE_ODDS_API_KEY", "")).strip()
     if not api_key:
         raise ValueError("API key mancante")
     sport = data.get("sport", "soccer_fifa_world_cup")

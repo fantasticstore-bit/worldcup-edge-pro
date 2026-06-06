@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import math
+import json
 import re
 import sqlite3
 import unicodedata
@@ -11,6 +12,7 @@ from statistics import median
 
 ROOT = Path(__file__).resolve().parents[1]
 DB_PATH = ROOT / "data" / "worldcup_model.sqlite"
+SEED_DATA_PATH = ROOT / "app" / "seed_data.json"
 
 DEFAULT_CONTROLS = {
     "base_draw_probability": 0.27,
@@ -211,6 +213,54 @@ def init_db(conn: sqlite3.Connection) -> None:
     )
     for key, value in DEFAULT_CONTROLS.items():
         conn.execute("INSERT OR IGNORE INTO controls(key, value) VALUES(?, ?)", (key, value))
+    conn.commit()
+    seed_builtin_data(conn)
+
+
+def seed_builtin_data(conn: sqlite3.Connection) -> None:
+    if not SEED_DATA_PATH.exists():
+        return
+    teams_count = conn.execute("SELECT COUNT(*) AS count FROM teams").fetchone()["count"]
+    matches_count = conn.execute("SELECT COUNT(*) AS count FROM matches").fetchone()["count"]
+    if teams_count and matches_count:
+        return
+    payload = json.loads(SEED_DATA_PATH.read_text(encoding="utf-8"))
+    for row in payload.get("teams", []):
+        conn.execute(
+            """
+            INSERT OR IGNORE INTO teams(team, normalized_team, group_name, fifa_rank, fifa_points, strength, tier)
+            VALUES(?, ?, ?, ?, ?, ?, ?)
+            """,
+            (
+                row.get("team"),
+                row.get("normalized_team"),
+                row.get("group_name"),
+                row.get("fifa_rank"),
+                row.get("fifa_points"),
+                float(row.get("strength") or 75),
+                row.get("tier"),
+            ),
+        )
+    for row in payload.get("matches", []):
+        conn.execute(
+            """
+            INSERT OR IGNORE INTO matches(
+                match_id, group_name, match_date, utc_time, home_team, away_team, venue, stage, match_key
+            )
+            VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)
+            """,
+            (
+                row.get("match_id"),
+                row.get("group_name"),
+                row.get("match_date"),
+                row.get("utc_time"),
+                row.get("home_team"),
+                row.get("away_team"),
+                row.get("venue"),
+                row.get("stage"),
+                row.get("match_key"),
+            ),
+        )
     conn.commit()
 
 

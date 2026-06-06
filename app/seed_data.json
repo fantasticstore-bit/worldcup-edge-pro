@@ -1,0 +1,1230 @@
+{
+  "teams": [
+    {
+      "team": "Czech Republic",
+      "normalized_team": "Czech Republic",
+      "group_name": "A",
+      "fifa_rank": 41.0,
+      "fifa_points": 1501.38,
+      "strength": 81.7,
+      "tier": "Live Dog"
+    },
+    {
+      "team": "Mexico",
+      "normalized_team": "Mexico",
+      "group_name": "A",
+      "fifa_rank": 15.0,
+      "fifa_points": 1681.03,
+      "strength": 93.6,
+      "tier": "Strong"
+    },
+    {
+      "team": "South Africa",
+      "normalized_team": "South Africa",
+      "group_name": "A",
+      "fifa_rank": 60.0,
+      "fifa_points": null,
+      "strength": 73.1,
+      "tier": "Live Dog"
+    },
+    {
+      "team": "South Korea",
+      "normalized_team": "South Korea",
+      "group_name": "A",
+      "fifa_rank": 25.0,
+      "fifa_points": 1588.66,
+      "strength": 89.0,
+      "tier": "Solid"
+    },
+    {
+      "team": "Bosnia and Herzegovina",
+      "normalized_team": "Bosnia and Herzegovina",
+      "group_name": "B",
+      "fifa_rank": 65.0,
+      "fifa_points": null,
+      "strength": 70.8,
+      "tier": "Longshot"
+    },
+    {
+      "team": "Canada",
+      "normalized_team": "Canada",
+      "group_name": "B",
+      "fifa_rank": 30.0,
+      "fifa_points": 1556.48,
+      "strength": 86.8,
+      "tier": "Solid"
+    },
+    {
+      "team": "Qatar",
+      "normalized_team": "Qatar",
+      "group_name": "B",
+      "fifa_rank": 55.0,
+      "fifa_points": null,
+      "strength": 75.3,
+      "tier": "Live Dog"
+    },
+    {
+      "team": "Switzerland",
+      "normalized_team": "Switzerland",
+      "group_name": "B",
+      "fifa_rank": 19.0,
+      "fifa_points": 1649.4,
+      "strength": 91.8,
+      "tier": "Strong"
+    },
+    {
+      "team": "Brazil",
+      "normalized_team": "Brazil",
+      "group_name": "C",
+      "fifa_rank": 6.0,
+      "fifa_points": 1761.16,
+      "strength": 97.7,
+      "tier": "Elite"
+    },
+    {
+      "team": "Haiti",
+      "normalized_team": "Haiti",
+      "group_name": "C",
+      "fifa_rank": 83.0,
+      "fifa_points": null,
+      "strength": 62.6,
+      "tier": "Longshot"
+    },
+    {
+      "team": "Morocco",
+      "normalized_team": "Morocco",
+      "group_name": "C",
+      "fifa_rank": 8.0,
+      "fifa_points": 1755.87,
+      "strength": 96.8,
+      "tier": "Elite"
+    },
+    {
+      "team": "Scotland",
+      "normalized_team": "Scotland",
+      "group_name": "C",
+      "fifa_rank": 43.0,
+      "fifa_points": 1498.35,
+      "strength": 80.8,
+      "tier": "Live Dog"
+    },
+    {
+      "team": "Australia",
+      "normalized_team": "Australia",
+      "group_name": "D",
+      "fifa_rank": 27.0,
+      "fifa_points": 1580.67,
+      "strength": 88.1,
+      "tier": "Solid"
+    },
+    {
+      "team": "Paraguay",
+      "normalized_team": "Paraguay",
+      "group_name": "D",
+      "fifa_rank": 40.0,
+      "fifa_points": 1503.5,
+      "strength": 82.2,
+      "tier": "Solid"
+    },
+    {
+      "team": "Turkey",
+      "normalized_team": "Turkey",
+      "group_name": "D",
+      "fifa_rank": 22.0,
+      "fifa_points": 1599.04,
+      "strength": 90.4,
+      "tier": "Strong"
+    },
+    {
+      "team": "United States",
+      "normalized_team": "United States",
+      "group_name": "D",
+      "fifa_rank": 16.0,
+      "fifa_points": 1673.13,
+      "strength": 93.2,
+      "tier": "Strong"
+    },
+    {
+      "team": "Curacao",
+      "normalized_team": "Curacao",
+      "group_name": "E",
+      "fifa_rank": 82.0,
+      "fifa_points": null,
+      "strength": 63.0,
+      "tier": "Longshot"
+    },
+    {
+      "team": "Ecuador",
+      "normalized_team": "Ecuador",
+      "group_name": "E",
+      "fifa_rank": 23.0,
+      "fifa_points": 1594.78,
+      "strength": 90.0,
+      "tier": "Strong"
+    },
+    {
+      "team": "Germany",
+      "normalized_team": "Germany",
+      "group_name": "E",
+      "fifa_rank": 10.0,
+      "fifa_points": 1730.37,
+      "strength": 95.9,
+      "tier": "Elite"
+    },
+    {
+      "team": "Ivory Coast",
+      "normalized_team": "Ivory Coast",
+      "group_name": "E",
+      "fifa_rank": 34.0,
+      "fifa_points": 1532.98,
+      "strength": 84.9,
+      "tier": "Solid"
+    },
+    {
+      "team": "Japan",
+      "normalized_team": "Japan",
+      "group_name": "F",
+      "fifa_rank": 18.0,
+      "fifa_points": 1660.43,
+      "strength": 92.2,
+      "tier": "Strong"
+    },
+    {
+      "team": "Netherlands",
+      "normalized_team": "Netherlands",
+      "group_name": "F",
+      "fifa_rank": 7.0,
+      "fifa_points": 1757.87,
+      "strength": 97.3,
+      "tier": "Elite"
+    },
+    {
+      "team": "Sweden",
+      "normalized_team": "Sweden",
+      "group_name": "F",
+      "fifa_rank": 38.0,
+      "fifa_points": 1514.77,
+      "strength": 83.1,
+      "tier": "Solid"
+    },
+    {
+      "team": "Tunisia",
+      "normalized_team": "Tunisia",
+      "group_name": "F",
+      "fifa_rank": 44.0,
+      "fifa_points": 1483.05,
+      "strength": 80.4,
+      "tier": "Live Dog"
+    },
+    {
+      "team": "Belgium",
+      "normalized_team": "Belgium",
+      "group_name": "G",
+      "fifa_rank": 9.0,
+      "fifa_points": 1734.71,
+      "strength": 96.3,
+      "tier": "Elite"
+    },
+    {
+      "team": "Egypt",
+      "normalized_team": "Egypt",
+      "group_name": "G",
+      "fifa_rank": 29.0,
+      "fifa_points": 1563.24,
+      "strength": 87.2,
+      "tier": "Solid"
+    },
+    {
+      "team": "Iran",
+      "normalized_team": "Iran",
+      "group_name": "G",
+      "fifa_rank": 21.0,
+      "fifa_points": 1615.3,
+      "strength": 90.9,
+      "tier": "Strong"
+    },
+    {
+      "team": "New Zealand",
+      "normalized_team": "New Zealand",
+      "group_name": "G",
+      "fifa_rank": 85.0,
+      "fifa_points": null,
+      "strength": 61.6,
+      "tier": "Longshot"
+    },
+    {
+      "team": "Cape Verde",
+      "normalized_team": "Cape Verde",
+      "group_name": "H",
+      "fifa_rank": 69.0,
+      "fifa_points": null,
+      "strength": 68.9,
+      "tier": "Longshot"
+    },
+    {
+      "team": "Saudi Arabia",
+      "normalized_team": "Saudi Arabia",
+      "group_name": "H",
+      "fifa_rank": 61.0,
+      "fifa_points": null,
+      "strength": 72.6,
+      "tier": "Longshot"
+    },
+    {
+      "team": "Spain",
+      "normalized_team": "Spain",
+      "group_name": "H",
+      "fifa_rank": 2.0,
+      "fifa_points": 1876.4,
+      "strength": 99.5,
+      "tier": "Elite"
+    },
+    {
+      "team": "Uruguay",
+      "normalized_team": "Uruguay",
+      "group_name": "H",
+      "fifa_rank": 17.0,
+      "fifa_points": 1673.07,
+      "strength": 92.7,
+      "tier": "Strong"
+    },
+    {
+      "team": "France",
+      "normalized_team": "France",
+      "group_name": "I",
+      "fifa_rank": 1.0,
+      "fifa_points": 1877.32,
+      "strength": 100.0,
+      "tier": "Elite"
+    },
+    {
+      "team": "Iraq",
+      "normalized_team": "Iraq",
+      "group_name": "I",
+      "fifa_rank": 57.0,
+      "fifa_points": null,
+      "strength": 74.4,
+      "tier": "Live Dog"
+    },
+    {
+      "team": "Norway",
+      "normalized_team": "Norway",
+      "group_name": "I",
+      "fifa_rank": 31.0,
+      "fifa_points": 1550.94,
+      "strength": 86.3,
+      "tier": "Solid"
+    },
+    {
+      "team": "Senegal",
+      "normalized_team": "Senegal",
+      "group_name": "I",
+      "fifa_rank": 14.0,
+      "fifa_points": 1688.99,
+      "strength": 94.1,
+      "tier": "Strong"
+    },
+    {
+      "team": "Algeria",
+      "normalized_team": "Algeria",
+      "group_name": "J",
+      "fifa_rank": 28.0,
+      "fifa_points": 1564.26,
+      "strength": 87.7,
+      "tier": "Solid"
+    },
+    {
+      "team": "Argentina",
+      "normalized_team": "Argentina",
+      "group_name": "J",
+      "fifa_rank": 3.0,
+      "fifa_points": 1874.81,
+      "strength": 99.1,
+      "tier": "Elite"
+    },
+    {
+      "team": "Austria",
+      "normalized_team": "Austria",
+      "group_name": "J",
+      "fifa_rank": 24.0,
+      "fifa_points": 1593.45,
+      "strength": 89.5,
+      "tier": "Strong"
+    },
+    {
+      "team": "Jordan",
+      "normalized_team": "Jordan",
+      "group_name": "J",
+      "fifa_rank": 63.0,
+      "fifa_points": null,
+      "strength": 71.7,
+      "tier": "Longshot"
+    },
+    {
+      "team": "Colombia",
+      "normalized_team": "Colombia",
+      "group_name": "K",
+      "fifa_rank": 13.0,
+      "fifa_points": 1693.09,
+      "strength": 94.5,
+      "tier": "Strong"
+    },
+    {
+      "team": "DR Congo",
+      "normalized_team": "Dr Congo",
+      "group_name": "K",
+      "fifa_rank": 46.0,
+      "fifa_points": 1478.35,
+      "strength": 79.5,
+      "tier": "Live Dog"
+    },
+    {
+      "team": "Portugal",
+      "normalized_team": "Portugal",
+      "group_name": "K",
+      "fifa_rank": 5.0,
+      "fifa_points": 1763.83,
+      "strength": 98.2,
+      "tier": "Elite"
+    },
+    {
+      "team": "Uzbekistan",
+      "normalized_team": "Uzbekistan",
+      "group_name": "K",
+      "fifa_rank": 50.0,
+      "fifa_points": 1465.34,
+      "strength": 77.6,
+      "tier": "Live Dog"
+    },
+    {
+      "team": "Croatia",
+      "normalized_team": "Croatia",
+      "group_name": "L",
+      "fifa_rank": 11.0,
+      "fifa_points": 1717.07,
+      "strength": 95.4,
+      "tier": "Elite"
+    },
+    {
+      "team": "England",
+      "normalized_team": "England",
+      "group_name": "L",
+      "fifa_rank": 4.0,
+      "fifa_points": 1825.97,
+      "strength": 98.6,
+      "tier": "Elite"
+    },
+    {
+      "team": "Ghana",
+      "normalized_team": "Ghana",
+      "group_name": "L",
+      "fifa_rank": 74.0,
+      "fifa_points": null,
+      "strength": 66.7,
+      "tier": "Longshot"
+    },
+    {
+      "team": "Panama",
+      "normalized_team": "Panama",
+      "group_name": "L",
+      "fifa_rank": 33.0,
+      "fifa_points": 1540.64,
+      "strength": 85.4,
+      "tier": "Solid"
+    }
+  ],
+  "matches": [
+    {
+      "match_id": "A1",
+      "group_name": "A",
+      "match_date": "2026-06-11",
+      "utc_time": "19:00",
+      "home_team": "Mexico",
+      "away_team": "South Africa",
+      "venue": "Mexico City",
+      "stage": "Group Stage",
+      "match_key": "mexico|south africa"
+    },
+    {
+      "match_id": "A2",
+      "group_name": "A",
+      "match_date": "2026-06-12",
+      "utc_time": "02:00",
+      "home_team": "South Korea",
+      "away_team": "Czech Republic",
+      "venue": "Guadalajara",
+      "stage": "Group Stage",
+      "match_key": "south korea|czech republic"
+    },
+    {
+      "match_id": "B1",
+      "group_name": "B",
+      "match_date": "2026-06-12",
+      "utc_time": "19:00",
+      "home_team": "Canada",
+      "away_team": "Bosnia and Herzegovina",
+      "venue": "Toronto",
+      "stage": "Group Stage",
+      "match_key": "canada|bosnia and herzegovina"
+    },
+    {
+      "match_id": "D1",
+      "group_name": "D",
+      "match_date": "2026-06-13",
+      "utc_time": "01:00",
+      "home_team": "United States",
+      "away_team": "Paraguay",
+      "venue": "Los Angeles",
+      "stage": "Group Stage",
+      "match_key": "united states|paraguay"
+    },
+    {
+      "match_id": "D2",
+      "group_name": "D",
+      "match_date": "2026-06-13",
+      "utc_time": "04:00",
+      "home_team": "Australia",
+      "away_team": "Turkey",
+      "venue": "Vancouver",
+      "stage": "Group Stage",
+      "match_key": "australia|turkey"
+    },
+    {
+      "match_id": "B2",
+      "group_name": "B",
+      "match_date": "2026-06-13",
+      "utc_time": "19:00",
+      "home_team": "Qatar",
+      "away_team": "Switzerland",
+      "venue": "San Francisco",
+      "stage": "Group Stage",
+      "match_key": "qatar|switzerland"
+    },
+    {
+      "match_id": "C1",
+      "group_name": "C",
+      "match_date": "2026-06-13",
+      "utc_time": "22:00",
+      "home_team": "Brazil",
+      "away_team": "Morocco",
+      "venue": "New York/New Jersey",
+      "stage": "Group Stage",
+      "match_key": "brazil|morocco"
+    },
+    {
+      "match_id": "C2",
+      "group_name": "C",
+      "match_date": "2026-06-14",
+      "utc_time": "01:00",
+      "home_team": "Haiti",
+      "away_team": "Scotland",
+      "venue": "Boston",
+      "stage": "Group Stage",
+      "match_key": "haiti|scotland"
+    },
+    {
+      "match_id": "E1",
+      "group_name": "E",
+      "match_date": "2026-06-14",
+      "utc_time": "19:00",
+      "home_team": "Germany",
+      "away_team": "Curacao",
+      "venue": "Houston",
+      "stage": "Group Stage",
+      "match_key": "germany|curacao"
+    },
+    {
+      "match_id": "F1",
+      "group_name": "F",
+      "match_date": "2026-06-14",
+      "utc_time": "20:00",
+      "home_team": "Netherlands",
+      "away_team": "Japan",
+      "venue": "Dallas",
+      "stage": "Group Stage",
+      "match_key": "netherlands|japan"
+    },
+    {
+      "match_id": "E2",
+      "group_name": "E",
+      "match_date": "2026-06-14",
+      "utc_time": "23:00",
+      "home_team": "Ivory Coast",
+      "away_team": "Ecuador",
+      "venue": "Philadelphia",
+      "stage": "Group Stage",
+      "match_key": "ivory coast|ecuador"
+    },
+    {
+      "match_id": "F2",
+      "group_name": "F",
+      "match_date": "2026-06-15",
+      "utc_time": "02:00",
+      "home_team": "Sweden",
+      "away_team": "Tunisia",
+      "venue": "Monterrey",
+      "stage": "Group Stage",
+      "match_key": "sweden|tunisia"
+    },
+    {
+      "match_id": "H1",
+      "group_name": "H",
+      "match_date": "2026-06-15",
+      "utc_time": "16:00",
+      "home_team": "Spain",
+      "away_team": "Cape Verde",
+      "venue": "Atlanta",
+      "stage": "Group Stage",
+      "match_key": "spain|cape verde"
+    },
+    {
+      "match_id": "G1",
+      "group_name": "G",
+      "match_date": "2026-06-15",
+      "utc_time": "19:00",
+      "home_team": "Belgium",
+      "away_team": "Egypt",
+      "venue": "Seattle",
+      "stage": "Group Stage",
+      "match_key": "belgium|egypt"
+    },
+    {
+      "match_id": "H2",
+      "group_name": "H",
+      "match_date": "2026-06-15",
+      "utc_time": "22:00",
+      "home_team": "Saudi Arabia",
+      "away_team": "Uruguay",
+      "venue": "Miami",
+      "stage": "Group Stage",
+      "match_key": "saudi arabia|uruguay"
+    },
+    {
+      "match_id": "G2",
+      "group_name": "G",
+      "match_date": "2026-06-16",
+      "utc_time": "01:00",
+      "home_team": "Iran",
+      "away_team": "New Zealand",
+      "venue": "Los Angeles",
+      "stage": "Group Stage",
+      "match_key": "iran|new zealand"
+    },
+    {
+      "match_id": "I1",
+      "group_name": "I",
+      "match_date": "2026-06-16",
+      "utc_time": "19:00",
+      "home_team": "France",
+      "away_team": "Senegal",
+      "venue": "New York/New Jersey",
+      "stage": "Group Stage",
+      "match_key": "france|senegal"
+    },
+    {
+      "match_id": "I2",
+      "group_name": "I",
+      "match_date": "2026-06-16",
+      "utc_time": "22:00",
+      "home_team": "Iraq",
+      "away_team": "Norway",
+      "venue": "Boston",
+      "stage": "Group Stage",
+      "match_key": "iraq|norway"
+    },
+    {
+      "match_id": "J1",
+      "group_name": "J",
+      "match_date": "2026-06-17",
+      "utc_time": "01:00",
+      "home_team": "Argentina",
+      "away_team": "Algeria",
+      "venue": "Kansas City",
+      "stage": "Group Stage",
+      "match_key": "argentina|algeria"
+    },
+    {
+      "match_id": "J2",
+      "group_name": "J",
+      "match_date": "2026-06-17",
+      "utc_time": "04:00",
+      "home_team": "Austria",
+      "away_team": "Jordan",
+      "venue": "San Francisco",
+      "stage": "Group Stage",
+      "match_key": "austria|jordan"
+    },
+    {
+      "match_id": "K1",
+      "group_name": "K",
+      "match_date": "2026-06-17",
+      "utc_time": "17:00",
+      "home_team": "Portugal",
+      "away_team": "Dr Congo",
+      "venue": "Houston",
+      "stage": "Group Stage",
+      "match_key": "portugal|dr congo"
+    },
+    {
+      "match_id": "L1",
+      "group_name": "L",
+      "match_date": "2026-06-17",
+      "utc_time": "20:00",
+      "home_team": "England",
+      "away_team": "Croatia",
+      "venue": "Dallas",
+      "stage": "Group Stage",
+      "match_key": "england|croatia"
+    },
+    {
+      "match_id": "L2",
+      "group_name": "L",
+      "match_date": "2026-06-17",
+      "utc_time": "23:00",
+      "home_team": "Ghana",
+      "away_team": "Panama",
+      "venue": "Toronto",
+      "stage": "Group Stage",
+      "match_key": "ghana|panama"
+    },
+    {
+      "match_id": "K2",
+      "group_name": "K",
+      "match_date": "2026-06-18",
+      "utc_time": "02:00",
+      "home_team": "Uzbekistan",
+      "away_team": "Colombia",
+      "venue": "Mexico City",
+      "stage": "Group Stage",
+      "match_key": "uzbekistan|colombia"
+    },
+    {
+      "match_id": "A3",
+      "group_name": "A",
+      "match_date": "2026-06-18",
+      "utc_time": "16:00",
+      "home_team": "Czech Republic",
+      "away_team": "South Africa",
+      "venue": "Atlanta",
+      "stage": "Group Stage",
+      "match_key": "czech republic|south africa"
+    },
+    {
+      "match_id": "B3",
+      "group_name": "B",
+      "match_date": "2026-06-18",
+      "utc_time": "19:00",
+      "home_team": "Switzerland",
+      "away_team": "Bosnia and Herzegovina",
+      "venue": "Los Angeles",
+      "stage": "Group Stage",
+      "match_key": "switzerland|bosnia and herzegovina"
+    },
+    {
+      "match_id": "B4",
+      "group_name": "B",
+      "match_date": "2026-06-18",
+      "utc_time": "22:00",
+      "home_team": "Canada",
+      "away_team": "Qatar",
+      "venue": "Vancouver",
+      "stage": "Group Stage",
+      "match_key": "canada|qatar"
+    },
+    {
+      "match_id": "A4",
+      "group_name": "A",
+      "match_date": "2026-06-19",
+      "utc_time": "01:00",
+      "home_team": "Mexico",
+      "away_team": "South Korea",
+      "venue": "Guadalajara",
+      "stage": "Group Stage",
+      "match_key": "mexico|south korea"
+    },
+    {
+      "match_id": "D3",
+      "group_name": "D",
+      "match_date": "2026-06-19",
+      "utc_time": "04:00",
+      "home_team": "Turkey",
+      "away_team": "Paraguay",
+      "venue": "San Francisco",
+      "stage": "Group Stage",
+      "match_key": "turkey|paraguay"
+    },
+    {
+      "match_id": "D4",
+      "group_name": "D",
+      "match_date": "2026-06-19",
+      "utc_time": "19:00",
+      "home_team": "United States",
+      "away_team": "Australia",
+      "venue": "Seattle",
+      "stage": "Group Stage",
+      "match_key": "united states|australia"
+    },
+    {
+      "match_id": "C3",
+      "group_name": "C",
+      "match_date": "2026-06-19",
+      "utc_time": "22:00",
+      "home_team": "Scotland",
+      "away_team": "Morocco",
+      "venue": "Boston",
+      "stage": "Group Stage",
+      "match_key": "scotland|morocco"
+    },
+    {
+      "match_id": "C4",
+      "group_name": "C",
+      "match_date": "2026-06-20",
+      "utc_time": "01:00",
+      "home_team": "Brazil",
+      "away_team": "Haiti",
+      "venue": "Philadelphia",
+      "stage": "Group Stage",
+      "match_key": "brazil|haiti"
+    },
+    {
+      "match_id": "F3",
+      "group_name": "F",
+      "match_date": "2026-06-20",
+      "utc_time": "17:00",
+      "home_team": "Netherlands",
+      "away_team": "Sweden",
+      "venue": "Houston",
+      "stage": "Group Stage",
+      "match_key": "netherlands|sweden"
+    },
+    {
+      "match_id": "E3",
+      "group_name": "E",
+      "match_date": "2026-06-20",
+      "utc_time": "20:00",
+      "home_team": "Germany",
+      "away_team": "Ivory Coast",
+      "venue": "Toronto",
+      "stage": "Group Stage",
+      "match_key": "germany|ivory coast"
+    },
+    {
+      "match_id": "E4",
+      "group_name": "E",
+      "match_date": "2026-06-21",
+      "utc_time": "00:00",
+      "home_team": "Ecuador",
+      "away_team": "Curacao",
+      "venue": "Kansas City",
+      "stage": "Group Stage",
+      "match_key": "ecuador|curacao"
+    },
+    {
+      "match_id": "F4",
+      "group_name": "F",
+      "match_date": "2026-06-21",
+      "utc_time": "04:00",
+      "home_team": "Tunisia",
+      "away_team": "Japan",
+      "venue": "Monterrey",
+      "stage": "Group Stage",
+      "match_key": "tunisia|japan"
+    },
+    {
+      "match_id": "H3",
+      "group_name": "H",
+      "match_date": "2026-06-21",
+      "utc_time": "16:00",
+      "home_team": "Spain",
+      "away_team": "Saudi Arabia",
+      "venue": "Atlanta",
+      "stage": "Group Stage",
+      "match_key": "spain|saudi arabia"
+    },
+    {
+      "match_id": "G3",
+      "group_name": "G",
+      "match_date": "2026-06-21",
+      "utc_time": "19:00",
+      "home_team": "Belgium",
+      "away_team": "Iran",
+      "venue": "Los Angeles",
+      "stage": "Group Stage",
+      "match_key": "belgium|iran"
+    },
+    {
+      "match_id": "H4",
+      "group_name": "H",
+      "match_date": "2026-06-21",
+      "utc_time": "22:00",
+      "home_team": "Uruguay",
+      "away_team": "Cape Verde",
+      "venue": "Miami",
+      "stage": "Group Stage",
+      "match_key": "uruguay|cape verde"
+    },
+    {
+      "match_id": "G4",
+      "group_name": "G",
+      "match_date": "2026-06-22",
+      "utc_time": "01:00",
+      "home_team": "New Zealand",
+      "away_team": "Egypt",
+      "venue": "Vancouver",
+      "stage": "Group Stage",
+      "match_key": "new zealand|egypt"
+    },
+    {
+      "match_id": "I3",
+      "group_name": "I",
+      "match_date": "2026-06-22",
+      "utc_time": "02:00",
+      "home_team": "France",
+      "away_team": "Iraq",
+      "venue": "Philadelphia",
+      "stage": "Group Stage",
+      "match_key": "france|iraq"
+    },
+    {
+      "match_id": "J3",
+      "group_name": "J",
+      "match_date": "2026-06-22",
+      "utc_time": "17:00",
+      "home_team": "Argentina",
+      "away_team": "Austria",
+      "venue": "Dallas",
+      "stage": "Group Stage",
+      "match_key": "argentina|austria"
+    },
+    {
+      "match_id": "I4",
+      "group_name": "I",
+      "match_date": "2026-06-23",
+      "utc_time": "00:00",
+      "home_team": "Norway",
+      "away_team": "Senegal",
+      "venue": "New York/New Jersey",
+      "stage": "Group Stage",
+      "match_key": "norway|senegal"
+    },
+    {
+      "match_id": "J4",
+      "group_name": "J",
+      "match_date": "2026-06-23",
+      "utc_time": "03:00",
+      "home_team": "Jordan",
+      "away_team": "Algeria",
+      "venue": "San Francisco",
+      "stage": "Group Stage",
+      "match_key": "jordan|algeria"
+    },
+    {
+      "match_id": "K3",
+      "group_name": "K",
+      "match_date": "2026-06-23",
+      "utc_time": "17:00",
+      "home_team": "Portugal",
+      "away_team": "Uzbekistan",
+      "venue": "Houston",
+      "stage": "Group Stage",
+      "match_key": "portugal|uzbekistan"
+    },
+    {
+      "match_id": "L3",
+      "group_name": "L",
+      "match_date": "2026-06-23",
+      "utc_time": "20:00",
+      "home_team": "England",
+      "away_team": "Ghana",
+      "venue": "Boston",
+      "stage": "Group Stage",
+      "match_key": "england|ghana"
+    },
+    {
+      "match_id": "L4",
+      "group_name": "L",
+      "match_date": "2026-06-23",
+      "utc_time": "23:00",
+      "home_team": "Panama",
+      "away_team": "Croatia",
+      "venue": "Toronto",
+      "stage": "Group Stage",
+      "match_key": "panama|croatia"
+    },
+    {
+      "match_id": "K4",
+      "group_name": "K",
+      "match_date": "2026-06-24",
+      "utc_time": "02:00",
+      "home_team": "Colombia",
+      "away_team": "Dr Congo",
+      "venue": "Guadalajara",
+      "stage": "Group Stage",
+      "match_key": "colombia|dr congo"
+    },
+    {
+      "match_id": "B5",
+      "group_name": "B",
+      "match_date": "2026-06-24",
+      "utc_time": "19:00",
+      "home_team": "Switzerland",
+      "away_team": "Canada",
+      "venue": "Vancouver",
+      "stage": "Group Stage",
+      "match_key": "switzerland|canada"
+    },
+    {
+      "match_id": "B6",
+      "group_name": "B",
+      "match_date": "2026-06-24",
+      "utc_time": "19:00",
+      "home_team": "Bosnia and Herzegovina",
+      "away_team": "Qatar",
+      "venue": "Seattle",
+      "stage": "Group Stage",
+      "match_key": "bosnia and herzegovina|qatar"
+    },
+    {
+      "match_id": "C5",
+      "group_name": "C",
+      "match_date": "2026-06-24",
+      "utc_time": "22:00",
+      "home_team": "Scotland",
+      "away_team": "Brazil",
+      "venue": "Miami",
+      "stage": "Group Stage",
+      "match_key": "scotland|brazil"
+    },
+    {
+      "match_id": "C6",
+      "group_name": "C",
+      "match_date": "2026-06-24",
+      "utc_time": "22:00",
+      "home_team": "Morocco",
+      "away_team": "Haiti",
+      "venue": "Atlanta",
+      "stage": "Group Stage",
+      "match_key": "morocco|haiti"
+    },
+    {
+      "match_id": "A5",
+      "group_name": "A",
+      "match_date": "2026-06-25",
+      "utc_time": "01:00",
+      "home_team": "Czech Republic",
+      "away_team": "Mexico",
+      "venue": "Mexico City",
+      "stage": "Group Stage",
+      "match_key": "czech republic|mexico"
+    },
+    {
+      "match_id": "A6",
+      "group_name": "A",
+      "match_date": "2026-06-25",
+      "utc_time": "01:00",
+      "home_team": "South Africa",
+      "away_team": "South Korea",
+      "venue": "Monterrey",
+      "stage": "Group Stage",
+      "match_key": "south africa|south korea"
+    },
+    {
+      "match_id": "E5",
+      "group_name": "E",
+      "match_date": "2026-06-25",
+      "utc_time": "20:00",
+      "home_team": "Ecuador",
+      "away_team": "Germany",
+      "venue": "New York/New Jersey",
+      "stage": "Group Stage",
+      "match_key": "ecuador|germany"
+    },
+    {
+      "match_id": "E6",
+      "group_name": "E",
+      "match_date": "2026-06-25",
+      "utc_time": "20:00",
+      "home_team": "Curacao",
+      "away_team": "Ivory Coast",
+      "venue": "New York/New Jersey",
+      "stage": "Group Stage",
+      "match_key": "curacao|ivory coast"
+    },
+    {
+      "match_id": "F5",
+      "group_name": "F",
+      "match_date": "2026-06-25",
+      "utc_time": "23:00",
+      "home_team": "Japan",
+      "away_team": "Sweden",
+      "venue": "Dallas",
+      "stage": "Group Stage",
+      "match_key": "japan|sweden"
+    },
+    {
+      "match_id": "F6",
+      "group_name": "F",
+      "match_date": "2026-06-25",
+      "utc_time": "23:00",
+      "home_team": "Tunisia",
+      "away_team": "Netherlands",
+      "venue": "Kansas City",
+      "stage": "Group Stage",
+      "match_key": "tunisia|netherlands"
+    },
+    {
+      "match_id": "D5",
+      "group_name": "D",
+      "match_date": "2026-06-26",
+      "utc_time": "02:00",
+      "home_team": "Turkey",
+      "away_team": "United States",
+      "venue": "Los Angeles",
+      "stage": "Group Stage",
+      "match_key": "turkey|united states"
+    },
+    {
+      "match_id": "D6",
+      "group_name": "D",
+      "match_date": "2026-06-26",
+      "utc_time": "02:00",
+      "home_team": "Paraguay",
+      "away_team": "Australia",
+      "venue": "San Francisco",
+      "stage": "Group Stage",
+      "match_key": "paraguay|australia"
+    },
+    {
+      "match_id": "I5",
+      "group_name": "I",
+      "match_date": "2026-06-26",
+      "utc_time": "19:00",
+      "home_team": "Norway",
+      "away_team": "France",
+      "venue": "Boston",
+      "stage": "Group Stage",
+      "match_key": "norway|france"
+    },
+    {
+      "match_id": "I6",
+      "group_name": "I",
+      "match_date": "2026-06-26",
+      "utc_time": "19:00",
+      "home_team": "Senegal",
+      "away_team": "Iraq",
+      "venue": "Toronto",
+      "stage": "Group Stage",
+      "match_key": "senegal|iraq"
+    },
+    {
+      "match_id": "H5",
+      "group_name": "H",
+      "match_date": "2026-06-27",
+      "utc_time": "00:00",
+      "home_team": "Cape Verde",
+      "away_team": "Saudi Arabia",
+      "venue": "Houston",
+      "stage": "Group Stage",
+      "match_key": "cape verde|saudi arabia"
+    },
+    {
+      "match_id": "H6",
+      "group_name": "H",
+      "match_date": "2026-06-27",
+      "utc_time": "00:00",
+      "home_team": "Uruguay",
+      "away_team": "Spain",
+      "venue": "Guadalajara",
+      "stage": "Group Stage",
+      "match_key": "uruguay|spain"
+    },
+    {
+      "match_id": "G5",
+      "group_name": "G",
+      "match_date": "2026-06-27",
+      "utc_time": "03:00",
+      "home_team": "Egypt",
+      "away_team": "Iran",
+      "venue": "Seattle",
+      "stage": "Group Stage",
+      "match_key": "egypt|iran"
+    },
+    {
+      "match_id": "G6",
+      "group_name": "G",
+      "match_date": "2026-06-27",
+      "utc_time": "03:00",
+      "home_team": "New Zealand",
+      "away_team": "Belgium",
+      "venue": "Vancouver",
+      "stage": "Group Stage",
+      "match_key": "new zealand|belgium"
+    },
+    {
+      "match_id": "L5",
+      "group_name": "L",
+      "match_date": "2026-06-27",
+      "utc_time": "21:00",
+      "home_team": "Panama",
+      "away_team": "England",
+      "venue": "New York/New Jersey",
+      "stage": "Group Stage",
+      "match_key": "panama|england"
+    },
+    {
+      "match_id": "L6",
+      "group_name": "L",
+      "match_date": "2026-06-27",
+      "utc_time": "21:00",
+      "home_team": "Croatia",
+      "away_team": "Ghana",
+      "venue": "Philadelphia",
+      "stage": "Group Stage",
+      "match_key": "croatia|ghana"
+    },
+    {
+      "match_id": "K5",
+      "group_name": "K",
+      "match_date": "2026-06-27",
+      "utc_time": "23:30",
+      "home_team": "Colombia",
+      "away_team": "Portugal",
+      "venue": "Miami",
+      "stage": "Group Stage",
+      "match_key": "colombia|portugal"
+    },
+    {
+      "match_id": "K6",
+      "group_name": "K",
+      "match_date": "2026-06-27",
+      "utc_time": "23:30",
+      "home_team": "Dr Congo",
+      "away_team": "Uzbekistan",
+      "venue": "Atlanta",
+      "stage": "Group Stage",
+      "match_key": "dr congo|uzbekistan"
+    },
+    {
+      "match_id": "J5",
+      "group_name": "J",
+      "match_date": "2026-06-28",
+      "utc_time": "02:00",
+      "home_team": "Algeria",
+      "away_team": "Austria",
+      "venue": "Kansas City",
+      "stage": "Group Stage",
+      "match_key": "algeria|austria"
+    },
+    {
+      "match_id": "J6",
+      "group_name": "J",
+      "match_date": "2026-06-28",
+      "utc_time": "02:00",
+      "home_team": "Jordan",
+      "away_team": "Argentina",
+      "venue": "Dallas",
+      "stage": "Group Stage",
+      "match_key": "jordan|argentina"
+    }
+  ]
+}

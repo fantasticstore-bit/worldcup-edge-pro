@@ -93,3 +93,10 @@ Mexico,South Africa,1.55,4.90,8.40,Manual
 - `requirements.txt` contains the Streamlit dependency.
 - `DEPLOY_STREAMLIT.md` explains how to deploy it from a private GitHub repo.
 - The Streamlit demo intentionally uses fake/safe data only.
+
+## Real Web App Deploy
+
+- `DEPLOY_RENDER.md` explains how to deploy the actual local app experience online.
+- `app/seed_data.json` lets a fresh server start with the World Cup teams and schedule.
+- `run_pro.py` reads `PORT` and `HOST`, so it works on Render/Railway/Fly.
+- `THE_ODDS_API_KEY` can be set as a server environment variable for live odds refresh.
