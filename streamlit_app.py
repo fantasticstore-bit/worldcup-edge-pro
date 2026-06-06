@@ -7,7 +7,7 @@ import streamlit as st
 
 st.set_page_config(
     page_title="WorldCup Edge Pro",
-    page_icon="WE",
+    page_icon="⚽",
     layout="wide",
     initial_sidebar_state="expanded",
 )
