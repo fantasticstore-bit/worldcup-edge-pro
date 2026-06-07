@@ -47,16 +47,16 @@ Nel pannello dove hai comprato il dominio, aggiungi:
 ```text
 Type: A
 Name: @
-Value: 76.76.21.21
+Value: 216.198.79.1
 ```
 
 ```text
 Type: CNAME
 Name: www
-Value: cname.vercel-dns-0.com
+Value: 7aadc9b2df466643.vercel-dns-017.com
 ```
 
-Vercel potrebbe mostrarti valori DNS leggermente diversi: in quel caso usa sempre quelli indicati da Vercel.
+Vercel puo' mostrare valori DNS leggermente diversi per ogni progetto: usa sempre quelli indicati nella schermata `Domains` di Vercel.
 
 ### 5. Attendi la propagazione
 
