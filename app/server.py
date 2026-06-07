@@ -1288,10 +1288,26 @@ def export_assistant_csv(payload):
 def run(host="127.0.0.1", port=8765):
     conn = connect()
     init_db(conn)
+    auto_fetch_odds(conn)
     conn.close()
     httpd = ThreadingHTTPServer((host, port), Handler)
     print(f"WorldCup Edge running at http://{host}:{port}")
     httpd.serve_forever()
+
+
+def auto_fetch_odds(conn):
+    if os.environ.get("AUTO_FETCH_ODDS", "1").strip().lower() in ("0", "false", "no"):
+        return
+    if not os.environ.get("THE_ODDS_API_KEY", "").strip():
+        return
+    odds_count = conn.execute("SELECT COUNT(*) AS count FROM odds").fetchone()["count"]
+    if odds_count:
+        return
+    try:
+        result = fetch_odds_api(conn, {"sport": "soccer_fifa_world_cup", "bookmakers": ""})
+        print(f"Auto odds refresh complete: {result.get('inserted', 0)} rows")
+    except Exception as exc:
+        print(f"Auto odds refresh skipped: {exc}")
 
 
 if __name__ == "__main__":
