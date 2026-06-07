@@ -84,10 +84,17 @@ async function unlockApp() {
   const username = document.querySelector("#loginUser").value.trim();
   const password = document.querySelector("#loginPassword").value.trim();
   const accepted = document.querySelector("#acceptDisclaimer").checked;
+  error.textContent = "";
   if (!accepted) {
     error.textContent = "Accetta il disclaimer per continuare.";
     return;
   }
+  if (!username || !password) {
+    error.textContent = "Inserisci username e password.";
+    return;
+  }
+  document.querySelector("#unlockApp").disabled = true;
+  document.querySelector("#unlockApp").textContent = "Controllo...";
   try {
     await api("/api/login", {
       method: "POST",
@@ -98,7 +105,10 @@ async function unlockApp() {
     document.querySelector("#accessGate").classList.add("hidden");
     await loadAll();
   } catch (err) {
-    error.textContent = err.message;
+    error.textContent = err.message || "Login non riuscito.";
+  } finally {
+    document.querySelector("#unlockApp").disabled = false;
+    document.querySelector("#unlockApp").textContent = "Entra";
   }
 }
 

@@ -225,8 +225,8 @@ class Handler(SimpleHTTPRequestHandler):
             elif parsed.path in ("/api/login", "/api/license"):
                 username = str(data.get("username", "")).strip()
                 password = str(data.get("password") or data.get("code") or "").strip()
-                expected_user = os.environ.get("WORLD_CUP_EDGE_USER", DEFAULT_LOGIN_USER)
-                expected_password = os.environ.get("WORLD_CUP_EDGE_PASSWORD", DEFAULT_LOGIN_PASSWORD)
+                expected_user = os.environ.get("WORLD_CUP_EDGE_USER", DEFAULT_LOGIN_USER).strip()
+                expected_password = os.environ.get("WORLD_CUP_EDGE_PASSWORD", DEFAULT_LOGIN_PASSWORD).strip()
                 payload = {
                     "ok": username == expected_user and password == expected_password,
                     "product": "WorldCup Edge Pro",

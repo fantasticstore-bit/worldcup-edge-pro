@@ -823,6 +823,13 @@ tr:last-child td {
   margin-top: 3px;
 }
 
+#loginError {
+  min-height: 22px;
+  color: var(--bad);
+  font-weight: 800;
+  font-size: 14px;
+}
+
 .pill {
   display: inline-flex;
   align-items: center;
