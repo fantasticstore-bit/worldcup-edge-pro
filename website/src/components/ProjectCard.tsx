@@ -29,8 +29,27 @@ export function ProjectCard({ project }: ProjectCardProps) {
           </span>
         </div>
         <p className="mt-4 min-h-20 text-sm leading-6 text-white/60">
-          {project.description}
+          {project.oneLiner}
         </p>
+        <div className="mt-5 rounded border border-white/10 bg-black/25 p-3">
+          <div className="flex items-center justify-between gap-3">
+            <p className="text-[11px] uppercase tracking-[0.16em] text-white/50">
+              Stage
+            </p>
+            <p className="text-right text-xs font-medium text-white/70">
+              {project.stage}
+            </p>
+          </div>
+          <div className="mt-3 h-px bg-white/10" />
+          <div className="mt-3 flex items-center justify-between gap-3">
+            <p className="text-[11px] uppercase tracking-[0.16em] text-white/50">
+              Next
+            </p>
+            <p className="text-right text-xs font-medium text-neon">
+              {project.nextMilestone}
+            </p>
+          </div>
+        </div>
         <div className="mt-5 grid grid-cols-3 gap-2">
           {project.landing.metrics.map((metric) => (
             <div

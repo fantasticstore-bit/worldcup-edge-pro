@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, CheckCircle2 } from "lucide-react";
 import { Project } from "@/lib/projects";
 import { EmailCapture } from "@/components/EmailCapture";
 import { FadeIn, HeroReveal } from "@/components/Motion";
@@ -33,6 +33,25 @@ export function ProjectLanding({ project }: ProjectLandingProps) {
             <p className="mt-6 max-w-2xl text-lg leading-8 text-white/70">
               {project.landing.subheadline}
             </p>
+            <div className="mt-7 grid gap-3 sm:grid-cols-3">
+              {[
+                ["Stage", project.stage],
+                ["Market", project.market],
+                ["Next", project.nextMilestone]
+              ].map(([label, value]) => (
+                <div
+                  key={label}
+                  className="rounded border border-white/10 bg-black/25 p-4 backdrop-blur"
+                >
+                  <p className="text-[11px] uppercase tracking-[0.18em] text-white/50">
+                    {label}
+                  </p>
+                  <p className="mt-2 text-sm font-medium leading-5 text-white">
+                    {value}
+                  </p>
+                </div>
+              ))}
+            </div>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
                 href="/contact"
@@ -56,6 +75,17 @@ export function ProjectLanding({ project }: ProjectLandingProps) {
       </section>
 
       <section className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8">
+        <FadeIn className="mb-8 max-w-3xl">
+          <p className="text-sm font-medium uppercase tracking-[0.24em] text-electric">
+            System architecture
+          </p>
+          <h2 className="mt-3 text-3xl font-semibold text-white sm:text-5xl">
+            Built around the decisions that matter.
+          </h2>
+          <p className="mt-4 text-lg leading-8 text-white/60">
+            {project.oneLiner}
+          </p>
+        </FadeIn>
         <div className="grid gap-5 md:grid-cols-3">
           {project.landing.features.map((feature, index) => {
             const Icon = feature.icon;
@@ -78,7 +108,7 @@ export function ProjectLanding({ project }: ProjectLandingProps) {
         </div>
       </section>
 
-      <section className="mx-auto grid w-full max-w-7xl gap-5 px-5 py-6 sm:px-8 lg:grid-cols-2">
+      <section className="mx-auto grid w-full max-w-7xl gap-5 px-5 py-6 sm:px-8 lg:grid-cols-[0.8fr_1.2fr]">
         <FadeIn>
           <div className="h-full rounded-lg border border-white/10 bg-panel/80 p-7">
             <p className="text-sm font-medium uppercase tracking-[0.22em] text-electric">
@@ -92,9 +122,20 @@ export function ProjectLanding({ project }: ProjectLandingProps) {
         <FadeIn delay={0.07}>
           <div className="h-full rounded-lg border border-white/10 bg-white/[0.055] p-7">
             <p className="text-sm font-medium uppercase tracking-[0.22em] text-neon">
-              Product thesis
+              Build focus
             </p>
-            <p className="mt-4 text-2xl font-semibold leading-9 text-white">
+            <div className="mt-5 space-y-3">
+              {project.landing.buildFocus.map((item) => (
+                <div
+                  key={item}
+                  className="flex items-start gap-3 rounded border border-white/10 bg-black/25 p-4"
+                >
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-neon" />
+                  <p className="font-medium text-white">{item}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-5 text-sm leading-6 text-white/60">
               {project.landing.proof}
             </p>
           </div>

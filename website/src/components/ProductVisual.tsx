@@ -38,7 +38,7 @@ export function ProductVisual({ project, compact = false }: ProductVisualProps) 
           {project.landing.metrics.map((metric, index) => (
             <div
               key={metric}
-              className="flex items-center justify-between rounded border border-white/10 bg-black/35 px-4 py-3 backdrop-blur"
+              className="flex items-center justify-between rounded border border-white/10 bg-black/40 px-4 py-3 backdrop-blur"
             >
               <span className="text-sm text-white/70">{metric}</span>
               <span

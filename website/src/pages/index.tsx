@@ -69,6 +69,9 @@ export default function Home() {
         <meta property="og:title" content={`${site.name} | Product Hub`} />
         <meta property="og:description" content={site.description} />
         <meta property="og:url" content={site.url} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:title" content={`${site.name} | Product Hub`} />
+        <meta name="twitter:description" content={site.description} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <section className="relative overflow-hidden border-b border-white/10">
@@ -148,7 +151,7 @@ export default function Home() {
                       <Link
                         key={project.slug}
                         href={`/projects/${project.slug}`}
-                        className="group flex items-center justify-between gap-4 rounded border border-white/10 bg-black/35 p-4 transition hover:border-neon/40 hover:bg-black/50"
+                        className="group flex items-center justify-between gap-4 rounded border border-white/10 bg-black/40 p-4 transition hover:border-neon/40 hover:bg-black/50"
                       >
                         <div className="flex items-center gap-3">
                           <div className="grid h-10 w-10 place-items-center rounded border border-white/10 bg-white/10 text-electric">

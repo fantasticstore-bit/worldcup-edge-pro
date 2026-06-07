@@ -44,13 +44,16 @@ export default function ProjectPage({ slug }: ProjectPageProps) {
     <>
       <Head>
         <title>{`${project.name} | ${site.name}`}</title>
-        <meta name="description" content={project.description} />
+        <meta name="description" content={project.oneLiner} />
         <meta property="og:title" content={project.name} />
-        <meta property="og:description" content={project.description} />
+        <meta property="og:description" content={project.oneLiner} />
         <meta
           property="og:url"
           content={`${site.url}/projects/${project.slug}`}
         />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${project.name} | ${site.name}`} />
+        <meta name="twitter:description" content={project.oneLiner} />
       </Head>
       <ProjectLanding project={project} />
     </>

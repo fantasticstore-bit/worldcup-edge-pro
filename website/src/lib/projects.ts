@@ -16,8 +16,12 @@ export type Project = {
   slug: string;
   name: string;
   eyebrow: string;
+  oneLiner: string;
   description: string;
   status: ProjectStatus;
+  market: string;
+  stage: string;
+  nextMilestone: string;
   icon: LucideIcon;
   accent: "green" | "blue" | "mixed";
   landing: {
@@ -30,6 +34,7 @@ export type Project = {
       description: string;
       icon: LucideIcon;
     }[];
+    buildFocus: string[];
     audience: string;
     proof: string;
   };
@@ -40,9 +45,13 @@ export const projects: Project[] = [
     slug: "lego-tracker",
     name: "LEGO Tracker",
     eyebrow: "Alternative assets",
+    oneLiner: "A market intelligence layer for collectible LEGO investing.",
     description:
       "Track LEGO set prices, ROI, retirement dates and investment opportunities.",
     status: "In development",
+    market: "Collectors, resellers, alternative-asset investors",
+    stage: "Research and prototype",
+    nextMilestone: "Private watchlist beta",
     icon: Boxes,
     accent: "green",
     landing: {
@@ -74,6 +83,11 @@ export const projects: Project[] = [
             "Compare ROI, liquidity and risk signals before committing capital to a set.",
           icon: Sparkles
         }
+      ],
+      buildFocus: [
+        "Set-level portfolio tracking",
+        "Retirement and scarcity signals",
+        "ROI and liquidity opportunity scoring"
       ]
     }
   },
@@ -81,9 +95,13 @@ export const projects: Project[] = [
     slug: "geofleet-ai",
     name: "GeoFleet AI",
     eyebrow: "Logistics intelligence",
+    oneLiner: "Predictive operations for fleets, routes and delivery risk.",
     description:
       "Predict route completion times, delivery risks and driver performance.",
     status: "Coming soon",
+    market: "Logistics operators, dispatch teams, delivery fleets",
+    stage: "Concept and data model",
+    nextMilestone: "Route-risk prototype",
     icon: Route,
     accent: "blue",
     landing: {
@@ -115,6 +133,11 @@ export const projects: Project[] = [
             "Understand driver consistency, territory difficulty and day-to-day execution signals.",
           icon: BarChart3
         }
+      ],
+      buildFocus: [
+        "Route completion forecasts",
+        "Late-window and exception risk",
+        "Driver and territory performance patterns"
       ]
     }
   },
@@ -122,9 +145,13 @@ export const projects: Project[] = [
     slug: "world-cup-ai-model",
     name: "World Cup AI Model",
     eyebrow: "Football analytics",
+    oneLiner: "Explainable football forecasting for World Cup 2026.",
     description:
       "AI-powered football analytics and prediction engine for World Cup 2026.",
     status: "MVP",
+    market: "Football analysts, disciplined bettors, sports data builders",
+    stage: "Live MVP",
+    nextMilestone: "Public demo and model notes",
     icon: Trophy,
     accent: "mixed",
     landing: {
@@ -156,6 +183,11 @@ export const projects: Project[] = [
             "Track results, ROI, price movement and model quality across the tournament.",
           icon: BarChart3
         }
+      ],
+      buildFocus: [
+        "Team strength and match probabilities",
+        "Value shortlist with confidence notes",
+        "Performance tracking and model diagnostics"
       ]
     }
   },
@@ -163,9 +195,13 @@ export const projects: Project[] = [
     slug: "power-bi-templates",
     name: "Power BI Templates",
     eyebrow: "Analytics assets",
+    oneLiner: "Polished dashboard systems for operators who move fast.",
     description:
       "Ready-to-use dashboards for finance, logistics and personal management.",
     status: "Coming soon",
+    market: "Founders, analysts, finance and operations teams",
+    stage: "Template architecture",
+    nextMilestone: "First template pack",
     icon: BarChart3,
     accent: "green",
     landing: {
@@ -197,6 +233,11 @@ export const projects: Project[] = [
             "Get dashboard systems that look credible in front of clients, teams and investors.",
           icon: Sparkles
         }
+      ],
+      buildFocus: [
+        "Executive KPI layouts",
+        "Reusable semantic models",
+        "Presentation-ready dashboard packs"
       ]
     }
   }
