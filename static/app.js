@@ -465,7 +465,7 @@ function oddsLine(row) {
 }
 
 function bestOutcome(row) {
-  if (!row.outcomes.length) return null;
+  if (!row.outcomes?.length) return null;
   return [...row.outcomes].sort((a, b) => b.ev - a.ev)[0];
 }
 
@@ -656,14 +656,89 @@ function openBet(matchId) {
 }
 
 async function openDetail(matchId) {
-  const row = await api(`/api/match?match_id=${encodeURIComponent(matchId)}`);
+  const row = state.demo ? demoDetail(matchId) : await api(`/api/match?match_id=${encodeURIComponent(matchId)}`);
+  if (!row) return;
   state.detailMatch = row;
   const best = bestOutcome(row);
+  window.scrollTo({ left: 0, top: window.scrollY });
   document.querySelector("#detailTitle").textContent = `${row.home_team} - ${row.away_team}`;
   document.querySelector("#detailSubtitle").textContent = `${row.match_id} · Gruppo ${row.group} · ${row.date} ${row.time || ""} · ${row.venue || ""}`;
   document.querySelector("#detailBody").innerHTML = renderDetail(row, best);
   document.querySelector("#detailSaveBet").disabled = !best || row.recommendation === "SKIP" || row.recommendation === "ADD ODDS";
   document.querySelector("#matchDialog").showModal();
+}
+
+function demoDetail(matchId) {
+  const card = state.assistant?.cards?.find((item) => item.match_id === matchId);
+  if (!card) return null;
+  const [homeTeam, awayTeam] = card.match.split(" - ");
+  const outcomeCode = card.pick.includes(homeTeam) ? "HOME" : card.pick.includes(awayTeam) ? "AWAY" : "DRAW";
+  const fairOdds = card.min_playable_odds || card.best_odds;
+  const marketOdds = card.country_best_odds || card.best_odds;
+  return {
+    match_id: card.match_id,
+    home_team: homeTeam || card.match,
+    away_team: awayTeam || "",
+    group: "Demo",
+    date: card.date,
+    time: card.time,
+    venue: "Demo",
+    recommendation: card.pick,
+    price_alert: card.price_alert,
+    confidence: card.confidence,
+    pick_best_odds: marketOdds,
+    pick_best_bookmaker: card.country_best_bookmaker || card.best_bookmaker,
+    pick_median_odds: card.best_odds,
+    best_ev: card.ev,
+    best_edge: Math.max(0, (card.ev || 0) * 0.25),
+    kelly: card.stake ? 0.006 : 0,
+    suggested_stake: card.stake,
+    overround: 0.045,
+    reason: card.why,
+    price_gap: Math.max(0, (marketOdds / (card.best_odds || marketOdds)) - 1),
+    price_note: card.price_status,
+    timing_alert: {
+      label: card.action === "NON GIOCARE" ? "WATCH" : "BEST PRICE",
+      tone: card.action === "NON GIOCARE" ? "bad" : "good",
+      note: card.price_status,
+    },
+    line_movement: {
+      selection: card.pick,
+      direction: card.action === "NON GIOCARE" ? "down" : "flat",
+      delta: card.action === "NON GIOCARE" ? -0.42 : 0.01,
+      latest: { median_odds: card.best_odds },
+      previous: { median_odds: card.action === "NON GIOCARE" ? 4.62 : 2.34 },
+      points: [
+        { updated_at: "T-2", median_odds: card.action === "NON GIOCARE" ? 4.62 : 2.33 },
+        { updated_at: "T-1", median_odds: card.action === "NON GIOCARE" ? 4.40 : 2.34 },
+        { updated_at: "Ora", median_odds: card.best_odds },
+      ],
+    },
+    outcomes: [
+      {
+        outcome_code: outcomeCode,
+        selection: card.pick,
+        odds: marketOdds,
+        bookmaker: card.country_best_bookmaker || card.best_bookmaker,
+        best_odds: marketOdds,
+        best_bookmaker: card.country_best_bookmaker || card.best_bookmaker,
+        model_prob: fairOdds ? 1 / fairOdds : 0,
+        fair_odds: fairOdds,
+        ev: card.ev,
+        kelly: card.stake ? 0.006 : 0,
+      },
+    ],
+    odds_snapshots: [
+      {
+        updated_at: "Demo",
+        bookmaker: card.country_best_bookmaker || card.best_bookmaker,
+        home_odds: outcomeCode === "HOME" ? marketOdds : 2.10,
+        draw_odds: outcomeCode === "DRAW" ? marketOdds : 3.40,
+        away_odds: outcomeCode === "AWAY" ? marketOdds : 3.20,
+        source: "demo",
+      },
+    ],
+  };
 }
 
 function renderDetail(row, best) {
