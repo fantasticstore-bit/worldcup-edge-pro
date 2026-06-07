@@ -60,6 +60,8 @@ const thesis = [
   }
 ];
 
+const featuredProject = projects.find((project) => project.slug === "lego-tracker");
+
 export default function Home() {
   return (
     <>
@@ -236,6 +238,64 @@ export default function Home() {
           })}
         </div>
       </section>
+
+      {featuredProject ? (
+        <section className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8">
+          <FadeIn>
+            <div className="relative overflow-hidden rounded-lg border border-neon/20 bg-white/[0.055] p-6 shadow-glow backdrop-blur-xl sm:p-8">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(77,255,136,0.18),transparent_32%),radial-gradient(circle_at_82%_15%,rgba(49,168,255,0.16),transparent_30%)]" />
+              <div className="relative grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+                <div>
+                  <p className="text-sm font-medium uppercase tracking-[0.24em] text-neon">
+                    Featured build
+                  </p>
+                  <h2 className="mt-4 text-3xl font-semibold text-white sm:text-5xl">
+                    LEGO Tracker is the first serious product bet.
+                  </h2>
+                  <p className="mt-5 text-lg leading-8 text-white/70">
+                    The private prototype already works like a market cockpit:
+                    portfolio value, watchlists, API sync, hot sets, momentum
+                    filters, pulse scores and set-level buy/hold guidance.
+                  </p>
+                  <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+                    <Link
+                      href="/projects/lego-tracker"
+                      className="inline-flex min-h-12 items-center justify-center gap-2 rounded bg-neon px-5 font-semibold text-black transition hover:bg-white"
+                    >
+                      Open LEGO Tracker
+                      <ArrowRight className="h-4 w-4" />
+                    </Link>
+                    <Link
+                      href="/contact"
+                      className="inline-flex min-h-12 items-center justify-center rounded border border-white/15 bg-white/10 px-5 font-semibold text-white transition hover:bg-white/15"
+                    >
+                      Request beta access
+                    </Link>
+                  </div>
+                </div>
+                <div className="grid gap-3 sm:grid-cols-2">
+                  {[
+                    ["Portfolio", "Owned sets, paid price, estimated value and gain."],
+                    ["Pulse score", "A fast signal for momentum and set quality."],
+                    ["Decision center", "Verdict, liquidity, sealed premium and data source."],
+                    ["Watchlist", "Target prices and buy-zone monitoring."]
+                  ].map(([title, body]) => (
+                    <div
+                      key={title}
+                      className="rounded border border-white/10 bg-black/30 p-5"
+                    >
+                      <p className="font-semibold text-white">{title}</p>
+                      <p className="mt-2 text-sm leading-6 text-white/60">
+                        {body}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </FadeIn>
+        </section>
+      ) : null}
 
       <section className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8">
         <FadeIn className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">

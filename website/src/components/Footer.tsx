@@ -13,7 +13,7 @@ export function Footer() {
             Building focused tools at the intersection of AI, analytics,
             operations and alternative investment signals.
           </p>
-          <p className="mt-5 text-sm text-white/45">
+          <p className="mt-5 text-sm text-white/50">
             Built by Marco Roberti.
           </p>
         </div>

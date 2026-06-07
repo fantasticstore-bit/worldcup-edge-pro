@@ -45,49 +45,50 @@ export const projects: Project[] = [
     slug: "lego-tracker",
     name: "LEGO Tracker",
     eyebrow: "Alternative assets",
-    oneLiner: "A market intelligence layer for collectible LEGO investing.",
+    oneLiner:
+      "A portfolio and market cockpit for LEGO collectors, resellers and investors.",
     description:
-      "Track LEGO set prices, ROI, retirement dates and investment opportunities.",
+      "Track LEGO set prices, portfolio value, pulse scores, retirement signals and buy targets.",
     status: "In development",
     market: "Collectors, resellers, alternative-asset investors",
-    stage: "Research and prototype",
-    nextMilestone: "Private watchlist beta",
+    stage: "Working private prototype",
+    nextMilestone: "Private beta access",
     icon: Boxes,
     accent: "green",
     landing: {
-      headline: "A smarter command center for LEGO investing.",
+      headline: "A private investment cockpit for LEGO collectors.",
       subheadline:
-        "Monitor collectible set values, retirement windows, market velocity and ROI signals from one premium dashboard.",
-      primaryCta: "Join LEGO Tracker updates",
-      metrics: ["ROI watchlists", "Retirement signals", "Price history"],
+        "LEGO Tracker turns collection data, market prices, API sync, pulse scores and watchlist targets into one decision center for what to buy, hold or sell.",
+      primaryCta: "Request private beta access",
+      metrics: ["Pulse score", "Portfolio gain", "Buy targets"],
       audience:
-        "Built for collectors, resellers and alternative-asset investors who want to make decisions with data instead of scattered marketplace tabs.",
+        "Built for collectors, resellers and LEGO investors who want a cleaner answer than scattered marketplace tabs, BrickLink checks and gut feeling.",
       proof:
-        "Designed around repeatable investment workflows: shortlist, track, compare, time entry, and monitor exits.",
+        "The working prototype already includes account login, portfolio tracking, watchlists, API sync, hot-set filters, momentum views and a set-level decision center.",
       features: [
         {
-          title: "Portfolio tracking",
+          title: "Portfolio intelligence",
           description:
-            "Organize owned sets, target prices, acquisition cost and estimated upside in one live view.",
+            "Track owned sets, quantities, paid price, estimated market value and gain across a real collection.",
           icon: BarChart3
         },
         {
-          title: "Retirement intelligence",
+          title: "Decision center",
           description:
-            "Prioritize sets nearing retirement and identify categories with stronger scarcity potential.",
+            "Open a set and see badges, data source, verdict, liquidity, sealed premium and operational guidance.",
           icon: Timer
         },
         {
-          title: "Opportunity scoring",
+          title: "Watchlist targets",
           description:
-            "Compare ROI, liquidity and risk signals before committing capital to a set.",
+            "Search by set or code, define target prices and monitor distance from buy zones.",
           icon: Sparkles
         }
       ],
       buildFocus: [
-        "Set-level portfolio tracking",
-        "Retirement and scarcity signals",
-        "ROI and liquidity opportunity scoring"
+        "Real portfolio value and gain tracking",
+        "Pulse score, momentum and hot-set filtering",
+        "Buy/hold/watch verdicts at set level"
       ]
     }
   },
