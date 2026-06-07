@@ -258,6 +258,66 @@ export default function Home() {
         <ProjectGrid />
       </section>
 
+      <section className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8">
+        <FadeIn className="mb-8 max-w-3xl">
+          <p className="text-sm font-medium uppercase tracking-[0.24em] text-neon">
+            Build queue
+          </p>
+          <h2 className="mt-3 text-3xl font-semibold text-white sm:text-5xl">
+            What is moving next.
+          </h2>
+          <p className="mt-4 text-lg leading-8 text-white/60">
+            The hub is designed to evolve in public: prototypes become MVPs,
+            MVPs become products, and products earn their place in the stack.
+          </p>
+        </FadeIn>
+        <div className="overflow-hidden rounded-lg border border-white/10 bg-white/[0.045] backdrop-blur-xl">
+          {projects.map((project, index) => {
+            const Icon = project.icon;
+            return (
+              <FadeIn key={project.slug} delay={index * 0.04}>
+                <Link
+                  href={`/projects/${project.slug}`}
+                  className="grid gap-4 border-b border-white/10 p-5 transition last:border-b-0 hover:bg-white/[0.055] md:grid-cols-[auto_1fr_0.75fr_0.75fr_auto] md:items-center"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="grid h-11 w-11 place-items-center rounded border border-white/10 bg-black/30 text-electric">
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <p className="font-mono text-sm text-neon">0{index + 1}</p>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-white">
+                      {project.name}
+                    </h3>
+                    <p className="mt-1 text-sm text-white/60">
+                      {project.oneLiner}
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-[11px] uppercase tracking-[0.16em] text-white/50">
+                      Stage
+                    </p>
+                    <p className="mt-1 text-sm font-medium text-white/70">
+                      {project.stage}
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-[11px] uppercase tracking-[0.16em] text-white/50">
+                      Next
+                    </p>
+                    <p className="mt-1 text-sm font-medium text-white/70">
+                      {project.nextMilestone}
+                    </p>
+                  </div>
+                  <ArrowRight className="hidden h-5 w-5 text-white/40 md:block" />
+                </Link>
+              </FadeIn>
+            );
+          })}
+        </div>
+      </section>
+
       <EmailCapture />
     </>
   );
