@@ -39,7 +39,7 @@ export default function PrivacyPage() {
             {
               title: "Contact",
               body:
-                "For privacy questions, use hello@marcoroberti.it."
+                "For privacy questions, use marco.roberti@marcoroberti.it."
             }
           ].map((item) => (
             <div

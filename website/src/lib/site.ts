@@ -3,5 +3,5 @@ export const site = {
   url: "https://marcoroberti.it",
   description:
     "Marco Roberti builds AI, analytics and investment tools for sharper decisions.",
-  email: "hello@marcoroberti.it"
+  email: "marco.roberti@marcoroberti.it"
 };
