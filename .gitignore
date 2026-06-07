@@ -10,3 +10,9 @@ data/*.sqlite3
 data/*.db
 *.log
 .codex_tmp/
+node_modules/
+.next/
+website/node_modules/
+website/.next/
+.pnpm-store/
+website/.pnpm-store/
