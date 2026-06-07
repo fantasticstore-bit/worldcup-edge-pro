@@ -296,6 +296,12 @@ h2 {
   font-size: 17px;
 }
 
+.assistant-subtitle {
+  color: #c8d8ce !important;
+  font-size: 14px !important;
+  max-width: 760px;
+}
+
 .assistant-rules {
   display: flex;
   gap: 8px;
@@ -325,6 +331,31 @@ h2 {
   text-decoration: none;
   font-weight: 800;
   font-size: 13px;
+}
+
+.assistant-export.muted {
+  border-color: rgba(255, 255, 255, 0.32);
+  color: #edf7f0;
+}
+
+.assistant-actions,
+.assistant-legend {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.assistant-legend span {
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #d8eee5;
+  padding: 6px 8px;
+  font-size: 12px;
+}
+
+.assistant-legend strong {
+  color: white;
 }
 
 .assistant-bankroll {

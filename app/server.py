@@ -501,8 +501,16 @@ def betting_assistant(conn, query):
                 "why": assistant_reason(play, min_playable_odds, best_country),
             }
         )
-    today_count = len([card for card in cards if card["tone"] == "good"])
-    watch_count = len([card for card in cards if card["tone"] != "good"])
+    playable_count = len([card for card in cards if card["tone"] == "good"])
+    watch_count = len([card for card in cards if card["tone"] == "watch"])
+    blocked_count = len([card for card in cards if card["tone"] == "bad"])
+    opportunity_count = playable_count + watch_count
+    if playable_count:
+        primary = f"{playable_count} giocabili ora, {watch_count} da verificare, {blocked_count} da saltare."
+    elif opportunity_count:
+        primary = f"{opportunity_count} opportunità da verificare, nessuna forzata."
+    else:
+        primary = "Nessuna entrata pulita ora: il modello protegge il bankroll."
     return {
         "country": country,
         "country_label": country_cfg["label"],
@@ -514,9 +522,15 @@ def betting_assistant(conn, query):
         "risk_status": summary_data.get("risk_status"),
         "plan": {
             "title": "Cosa faccio oggi",
-            "primary": f"{today_count} giocabili ora, {watch_count} da controllare sul prezzo.",
+            "primary": primary,
+            "subtitle": "Price discipline per matchday: quota minima, stake e bookmaker prima di decidere.",
             "bankroll_note": f"Bankroll {bankroll:.2f} u, unità {unit:.2f} u, spazio residuo {remaining_exposure:.2f} u.",
             "rule": "Gioca solo se trovi almeno la quota minima. Se il bookmaker è sotto, passa o aspetta.",
+            "legend": [
+                {"label": "Verde", "text": "playable"},
+                {"label": "Arancione", "text": "watch / stake piccolo"},
+                {"label": "Rosso", "text": "no play"},
+            ],
         },
         "cards": cards[:5],
     }

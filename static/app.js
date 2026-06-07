@@ -161,10 +161,14 @@ function renderAssistant(data) {
   if (!data) return;
   document.querySelector("#assistantTitle").textContent = data.plan.title;
   document.querySelector("#assistantPrimary").textContent = data.plan.primary;
+  document.querySelector("#assistantSubtitle").textContent = data.plan.subtitle || "";
   document.querySelector("#assistantRules").innerHTML = `
     <span>${data.plan.rule}</span>
     <span>${data.country_label} · ${data.risk_status}</span>
   `;
+  document.querySelector("#assistantLegend").innerHTML = (data.plan.legend || []).map((item) => `
+    <span>${item.label}: <strong>${item.text}</strong></span>
+  `).join("");
   document.querySelector("#assistantBankroll").innerHTML = `
     <div><span>Bankroll</span><strong>${fmtNum(data.bankroll)} u</strong></div>
     <div><span>Spazio rimasto</span><strong>${fmtNum(data.remaining_exposure)} u</strong></div>
@@ -190,6 +194,7 @@ function renderAssistant(data) {
         <small>${card.country_best_odds ? "Migliore nel paese" : "Migliore nel feed"}</small>
       </div>
       <p>${card.why}</p>
+      <div class="micro">${card.action === "NON GIOCARE" ? "Disciplina: quota non abbastanza buona." : "Check rapido: se trovi la quota indicata o meglio, apri dettaglio/book."}</div>
       <div class="play-actions">
         <button class="bet-btn" data-detail="${card.match_id}">Dettaglio</button>
         <button class="bet-btn" data-find-books="${card.match_id}">Book</button>
