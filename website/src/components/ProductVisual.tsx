@@ -17,11 +17,14 @@ export function ProductVisual({ project, compact = false }: ProductVisualProps) 
   return (
     <div
       className={`relative overflow-hidden rounded-lg border border-white/10 bg-panel/80 p-5 shadow-blueglow ${
-        compact ? "min-h-56" : "min-h-80"
+        compact ? "min-h-64" : "min-h-[26rem]"
       }`}
     >
       <div className={`absolute inset-0 bg-gradient-to-br ${accent}`} />
+      <div className="scanline absolute inset-x-0 top-0 h-1/2" />
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:26px_26px]" />
+      <div className="absolute -right-16 top-10 h-44 w-44 rounded-full border border-white/10" />
+      <div className="absolute -right-8 top-20 h-28 w-28 rounded-full border border-electric/25" />
       <div className="relative flex h-full flex-col justify-between gap-8">
         <div className="flex items-center justify-between">
           <div className="rounded border border-white/15 bg-black/40 p-3 backdrop-blur">
@@ -35,7 +38,7 @@ export function ProductVisual({ project, compact = false }: ProductVisualProps) 
           {project.landing.metrics.map((metric, index) => (
             <div
               key={metric}
-              className="flex items-center justify-between rounded border border-white/10 bg-black/30 px-4 py-3 backdrop-blur"
+              className="flex items-center justify-between rounded border border-white/10 bg-black/35 px-4 py-3 backdrop-blur"
             >
               <span className="text-sm text-white/70">{metric}</span>
               <span
@@ -50,13 +53,25 @@ export function ProductVisual({ project, compact = false }: ProductVisualProps) 
             </div>
           ))}
         </div>
-        <div>
-          <p className="text-xs uppercase tracking-[0.22em] text-white/50">
-            Product system
-          </p>
-          <p className="mt-2 text-xl font-semibold text-white">
-            {project.name}
-          </p>
+        <div className="rounded border border-white/10 bg-black/30 p-4 backdrop-blur">
+          <div className="flex items-center justify-between gap-4">
+            <div>
+              <p className="text-xs uppercase tracking-[0.22em] text-white/50">
+                Product system
+              </p>
+              <p className="mt-2 text-xl font-semibold text-white">
+                {project.name}
+              </p>
+            </div>
+            <div className="text-right">
+              <p className="text-xs uppercase tracking-[0.2em] text-neon">
+                Signal
+              </p>
+              <p className="mt-1 font-mono text-2xl text-white">
+                {project.status === "MVP" ? "LIVE" : "BUILD"}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -31,6 +31,18 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <p className="mt-4 min-h-20 text-sm leading-6 text-white/60">
           {project.description}
         </p>
+        <div className="mt-5 grid grid-cols-3 gap-2">
+          {project.landing.metrics.map((metric) => (
+            <div
+              key={metric}
+              className="rounded border border-white/10 bg-black/25 px-3 py-2"
+            >
+              <p className="truncate text-[11px] uppercase tracking-[0.16em] text-white/50">
+                {metric}
+              </p>
+            </div>
+          ))}
+        </div>
         <Link
           href={`/projects/${project.slug}`}
           className="mt-6 inline-flex min-h-11 w-full items-center justify-center gap-2 rounded border border-neon/45 bg-neon/10 px-4 text-sm font-semibold text-neon transition hover:bg-neon hover:text-black"

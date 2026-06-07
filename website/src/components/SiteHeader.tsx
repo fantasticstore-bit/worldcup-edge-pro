@@ -14,8 +14,13 @@ export function SiteHeader() {
           <span className="grid h-9 w-9 place-items-center rounded border border-neon/40 bg-neon/10 text-sm font-bold text-neon shadow-glow">
             MR
           </span>
-          <span className="text-sm font-semibold tracking-wide text-white">
-            Marco Roberti
+          <span>
+            <span className="block text-sm font-semibold tracking-wide text-white">
+              Marco Roberti
+            </span>
+            <span className="hidden text-[11px] uppercase tracking-[0.22em] text-white/40 sm:block">
+              Product lab
+            </span>
           </span>
         </Link>
         <nav className="flex items-center gap-1">

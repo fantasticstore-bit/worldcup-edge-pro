@@ -19,6 +19,7 @@ body {
   min-height: 100vh;
   background: #030508;
   color: #f8fafc;
+  text-rendering: optimizeLegibility;
 }
 
 ::selection {
@@ -35,4 +36,29 @@ body {
   background-image:
     linear-gradient(115deg, rgba(255, 255, 255, 0.04), transparent 30%),
     linear-gradient(245deg, rgba(255, 255, 255, 0.03), transparent 32%);
+}
+
+.scanline {
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(77, 255, 136, 0.08),
+    transparent
+  );
+  animation: scan 6s ease-in-out infinite;
+}
+
+@keyframes scan {
+  0%,
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  40%,
+  60% {
+    opacity: 0.55;
+  }
+  50% {
+    transform: translateY(100%);
+  }
 }
